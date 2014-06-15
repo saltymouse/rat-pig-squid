@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px"
+	 height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+<g id="Rat">
+</g>
+<g id="Pig">
+	<g id="Pig_Alive">
+		<path id="ear_right" fill="#FF7BAC" d="M885.599,331.841c-48.971,48.972-128.369,48.973-177.34,0.001
+			c-48.973-48.973-48.973-128.371-0.001-177.343s177.343,0,177.343,0S934.57,282.869,885.599,331.841z"/>
+		<path id="ear_left" fill="#FF7BAC" d="M291.67,154.328c48.973,48.972,48.973,128.371,0,177.342
+			c-48.971,48.973-128.37,48.973-177.342,0c-48.972-48.971,0-177.342,0-177.342S242.699,105.356,291.67,154.328z"/>
+		<path id="ear_inner_l" fill="#FF99CC" d="M293.061,179.479c41.643,41.643,41.643,109.159,0,150.802s-109.159,41.643-150.802,0.001
+			c-41.643-41.644,0-150.804,0-150.804S251.418,137.836,293.061,179.479z"/>
+		<path id="ear_inner_r" fill="#FF99CC" d="M857.328,330.11c-41.643,41.642-109.159,41.643-150.803,0
+			c-41.642-41.644-41.642-109.159,0-150.803c41.644-41.643,150.804,0,150.804,0S898.971,288.466,857.328,330.11z"/>
+		<circle id="head" fill="#FF7BAC" cx="500" cy="540" r="422.4"/>
+		<circle id="snout" fill="#FFAECF" cx="499.999" cy="575.64" r="193.286"/>
+		<circle id="nostril_left" fill="#9B6767" cx="425.154" cy="575.64" r="63.112"/>
+		<circle id="nostril_right" fill="#9B6767" cx="583.158" cy="575.64" r="63.112"/>
+		<circle id="mouth" fill="#603813" cx="503.828" cy="820.594" r="20.938"/>
+		<path id="eye_left" fill="#603813" d="M440.884,324.778c0,0-36.048-6.905-76.049,3.812
+			c-40.003,10.719-68.812,35.003-68.812,35.003s18.526-60.573,58.527-71.292C394.553,281.583,440.884,324.778,440.884,324.778z"/>
+		<path id="eye_right" fill="#603813" d="M712.102,363.594c0,0-27.766-24.006-67.768-34.724
+			c-40.002-10.72-77.093-4.093-77.093-4.093s46.331-43.194,86.333-32.476C693.575,303.021,712.102,363.594,712.102,363.594z"/>
+	</g>
+	<g id="Grid_2_" display="none">
+		<circle display="inline" fill="none" stroke="#FF00FF" stroke-width="3" stroke-miterlimit="10" cx="500" cy="500" r="493.182"/>
+		<circle display="inline" fill="none" stroke="#FF00FF" stroke-width="3" stroke-miterlimit="10" cx="500" cy="500" r="313.681"/>
+		
+			<line display="inline" fill="none" stroke="#FF00FF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="0" x2="1000" y2="1000"/>
+		
+			<line display="inline" fill="none" stroke="#FF00FF" stroke-width="3" stroke-miterlimit="10" x1="1000" y1="0" x2="0" y2="1000"/>
+	</g>
+</g>
+<g id="Squid">
+</g>
+</svg>
