@@ -1,13 +1,19 @@
 // Remove JS warning for JS users
-document.getElementById("nojs").style.display = "none";
+
+	document.getElementById("nojs").style.display = "none";
+
+window.onload = function () {
+	var rat = document.getElementById("ratButton");
+	var choice = rat.getAttribute("id");
+	rat.onclick = getPlayerChoice;
+}
 
 // Add game logic
 
 //Sucky and incomplete code. Will rewrite / complete in the future. Just learning how to work with Git. 
-function getPlayerChoice() {
+function getPlayerChoice(event) {
 
-
-	return playerChoice;
+	console.log(event);
 }
 
 function getComputerChoice() {
