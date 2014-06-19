@@ -39,7 +39,7 @@ function playGame(playerChoice) {
 	var computerChoice = getComputerChoice();
         
 	if (playerChoice === computerChoice) {
-		return results.innerHTML = "<p>Tie!</p>";
+		return results.innerHTML = "<p class='results'>Tie!</p>";
         console.log(playerChoice,computerChoice);
 	}
 
@@ -49,11 +49,11 @@ function playGame(playerChoice) {
 		if (computerChoice === 'squid') {
             clearInterval(intervalHandler);
 			cpuAnimal.setAttribute("src", animalImages[2]);
-            results.innerHTML = "<p style='line-height:100px;'>Win!</p>";
+            results.innerHTML = "<p class='results'>Win!</p>";
 		} else {
             clearInterval(intervalHandler);
             cpuAnimal.setAttribute("src", animalImages[1]);
-			results.innerHTML = "<p style='line-height:100px;'>Lose!</p>";
+			results.innerHTML = "<p class='results'>Lose!</p>";
 		}
 	}
 
@@ -63,11 +63,11 @@ function playGame(playerChoice) {
 		if (computerChoice === 'rat') {
             clearInterval(intervalHandler);
             cpuAnimal.setAttribute("src", animalImages[0]);
-			results.innerHTML = "<p style='line-height:100px;'>Win!</p>";
+			results.innerHTML = "<p class='results'>Win!</p>";
 		} else {
             clearInterval(intervalHandler);
             cpuAnimal.setAttribute("src", animalImages[2]);
-			results.innerHTML = "<p style='line-height:100px;'>Lose!</p>";
+			results.innerHTML = "<p class='results'>Lose!</p>";
 		}
 	}
 
@@ -77,11 +77,11 @@ function playGame(playerChoice) {
 		if (computerChoice === 'pig') {
 			clearInterval(intervalHandler);
             cpuAnimal.setAttribute("src", animalImages[1]);
-			results.innerHTML = "<p style='line-height:100px;'>Win!</p>";
+			results.innerHTML = "<p class='results'>Win!</p>";
 		} else {
 			clearInterval(intervalHandler);
             cpuAnimal.setAttribute("src", animalImages[0]);
-			results.innerHTML = "<p style='line-height:100px;'>Lose!</p>";
+			results.innerHTML = "<p class='results'>Lose!</p>";
 		} 
 	}
 
