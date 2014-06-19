@@ -2,19 +2,7 @@
 
 	document.getElementById("nojs").style.display = "none";
 
-window.onload = function () {
-	var rat = document.getElementById("ratButton");
-	var choice = rat.getAttribute("id");
-	rat.onclick = getPlayerChoice;
-}
-
 // Add game logic
-
-//Sucky and incomplete code. Will rewrite / complete in the future. Just learning how to work with Git. 
-function getPlayerChoice(event) {
-
-	console.log(event);
-}
 
 function getComputerChoice() {
 	var computerChoice = Math.random();
@@ -30,6 +18,36 @@ function getComputerChoice() {
 	return computerChoice;
 }
 
-function compareAnimals(userChoice, computerChoice) {
+function playGame(playerChoice) {
+	var computerChoice = getComputerChoice();
+
+	if (playerChoice === computerChoice) {
+		alert("It's a tie!");
+	}
+
+	if (playerChoice === 'rat') {
+		if (computerChoice === 'squid') {
+			alert("You Win! Rat nibbles poor squid to death.");
+		} else {
+			alert("You Lose! Rat was squished by piggy.");
+		}
+	}
+
+	if (playerChoice === 'pig') {
+		if (computerChoice === 'rat') {
+			alert("You Win! Piggy squishes little rat.");
+		} else {
+			alert("You Lose! Piggy was strangled by squid.");
+		}
+	}
+
+	if (playerChoice === 'squid') {
+		if (computerChoice === 'pig') {
+			alert("You Win! Squid strangles litte piggy.");
+		} else {
+			alert("You Lose! Squid was nibbled to death by rat.");
+		} 
+	}
+
 
 }
