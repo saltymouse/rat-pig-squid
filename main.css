@@ -10,3 +10,20 @@ body { font-size: 20px; font-family: helvetica, arial, sans-serif; }
 .rat { background: #DDC6B8; color: #42210B; }
 .pig { background: #F9E4EC; color: #FF7BAC; }
 .squid { background: #C6C8E5; color: #2E3192; }
+
+#battleBox { background-color: #8C9C76; border-radius: .5em; width: 500px; height: 300px; margin: 0 auto; }
+
+#clickBox { width: 100px; height: 300px; float: left; }
+
+#cpuBox { width: 100px; height: 300px; float: right; }
+#cpuAnimal1, #cpuAnimal2, #cpuAnimal3 { width: 100px; height: 100px; }
+/*
+#cpuAnimal1 { background: grey; }
+#cpuAnimal2 { background: pink; }
+#cpuAnimal3 { background: gray; }
+*/
+
+#resultBox { width: 500px; height: 100px; color: #fff; text-transform: uppercase; font-weight: bold; position: absolute; }
+#resultBox p { width: 100px; margin: 100px auto; }
+
+#extraBox { clear: both; }

@@ -9,14 +9,24 @@
         <div id="mainBox">
             <h1 id="nojs">JavaScript is required to play this game.</h1>
             <h1>Rat Pig Squid</h1>
-            <div id="clickBox">
-                <span class="rat animal pick"><a href="#rat"><img id="ratButton" src="rat-alive.svg" alt="Rat Icon" width="200" height="200" onclick="playGame('rat')"></a></span>
-                <span class="pig animal pick"><a href="#pig"><img id="pigButton" src="pig-alive.svg" alt="Pig Icon" width="200" height="200" onclick="playGame('pig')"></a></span>
-                <span class="squid animal pick"><a href="#squid"><img id="squidButton" src="squid-alive.svg" alt="Squid Icon" width="200" height="200" onclick="playGame('squid')"></a></span>
-                <p>To play: click your animal above.</p>
+            <div id="battleBox">
+                <div id="clickBox">
+                    <span class="rat animal pick"><a href="#rat"><img id="ratButton" src="rat-alive.svg" alt="Rat Icon" width="100" height="100" onclick="playGame('rat')"></a></span>
+                    <span class="pig animal pick"><a href="#pig"><img id="pigButton" src="pig-alive.svg" alt="Pig Icon" width="100" height="100" onclick="playGame('pig')"></a></span>
+                    <span class="squid animal pick"><a href="#squid"><img id="squidButton" src="squid-alive.svg" alt="Squid Icon" width="100" height="100" onclick="playGame('squid')"></a></span>
+                </div>
+                <div id="resultBox">
+                    <p>Choose your animal on the left.</p>
+                </div>
+                <div id="cpuBox">
+                    <div id="cpuAnimal1"></div>
+                    <div id="cpuAnimal2"><img src="pig-alive.svg" alt="CPU choice" width="100" height="100" id="cpuAnimal2img"></div>
+                    <div id="cpuAnimal3"></div>
+                </div>
             </div>
-            <progress>
-            </progress>
+            <div id="extraBox">
+                <!--<progress></progress>-->
+            </div>
             <div id="rules">
                 <h2>Rules</h2>
                 <p class="rule">
