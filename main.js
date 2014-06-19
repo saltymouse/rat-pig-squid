@@ -39,7 +39,7 @@ function playGame(playerChoice) {
 	var computerChoice = getComputerChoice();
         
 	if (playerChoice === computerChoice) {
-		cpuAnimal.innerHTML = "Tie!";
+		return results.innerHTML = "<p>Tie!</p>";
         console.log(playerChoice,computerChoice);
 	}
 
