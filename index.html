@@ -1,58 +1,63 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <title>Rat Pig Squid</title>
-        <meta name="description" content="A fun new game based on rock-paper-scissors">
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <div id="mainBox">
-            <h1 id="nojs">JavaScript is required to play this game.</h1>
-            <h1>Rat Pig Squid</h1>
-            <div id="battleBox">
-                <div id="clickBox">
-                    <span class="">
-                        <a href="#rat">
-                            <img id="ratButton" src="rat-alive.svg" alt="Rat Icon" width="100" height="100" onclick="playGame('rat')">
-                        </a>
-                    </span>
-                    <span class="">
-                        <a href="#pig">
-                            <img id="pigButton" src="pig-alive.svg" alt="Pig Icon" width="100" height="100" onclick="playGame('pig')">
-                        </a>
-                    </span>
-                    <span class="">
-                        <a href="#squid">
-                            <img id="squidButton" src="squid-alive.svg" alt="Squid Icon" width="100" height="100" onclick="playGame('squid')">
-                        </a>
-                    </span>
-                </div>
-                <div id="resultBox">
-                    <p>Choose your animal on the left.</p>
-                </div>
-                <div id="cpuBox">
-                    <div id="cpuAnimal1"></div>
-                    <div id="cpuAnimal2"><img src="pig-alive.svg" alt="CPU choice" width="100" height="100" id="cpuAnimal2img"></div>
-                    <div id="cpuAnimal3"></div>
-                </div>
-            </div>
-            <div id="extraBox">
-                <!--<progress></progress>-->
-            </div>
-            <div id="rules">
-                <h2>Rules</h2>
-                <p class="rule">
-                    <span class="rat animal">Rat</span> nibbles <span class="squid animal">Squid's</span> soft gelatenous body
-                <img src="rat-alive.svg" alt="Rat Alive Icon" width="30" height="30"><img src="squid-dead.svg" alt="Squid Dead Icon" width="30" height="30">
-                </p>
-                <p class="rule">
-                Fat <span class="pig animal">Pig</span> crushes little <span class="rat animal">Rat</span> <img src="pig-alive.svg" alt="Rat Alive Icon" width="30" height="30"><img src="rat-dead.svg" alt="Rat Dead Icon" width="30" height="30">
-                </p>
-                <p class="rule">
-                    <span class="animal squid">Squid</span> strangles <span class="pig animal">Pig</span> with his tentacles. <img src="squid-alive.svg" alt="Squid Alive Icon" width="30" height="30"><img src="pig-dead.svg" alt="Pig Dead Icon" width="30" height="30">
-                </p>
-            </div>
-        </div>
-        <script src="main.js"></script>
-    </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Rat Pig Squid</title>
+  <meta name="description" content="A fun new game based on rock-paper-scissors">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div id="mainBox">
+   
+    <h1 id="nojs">JavaScript is required to play this game.</h1>
+    
+    <h1>Rat Pig Squid</h1>
+    <div id="battleBox">
+      <div id="clickBox">
+        <span class="">
+          <a href="#rat">
+            <img id="rat" src="rat-alive.svg" alt="Rat (alive)" width="100" height="100">
+          </a>
+        </span>
+        <span class="">
+          <a href="#pig">
+            <img id="pig" src="pig-alive.svg" alt="Pig (alive)" width="100" height="100">
+          </a>
+        </span>
+        <span class="">
+        <a href="#squid">
+          <img id="squid" src="squid-alive.svg" alt="Squid (alive)" width="100" height="100">
+        </a>
+        </span>
+      </div>
+      <div id="resultBox">
+        <p>Choose your animal on the left.</p>
+      </div>
+      <div id="cpuBox">
+        <div id="cpuAnimal1"></div>
+        <div id="cpuAnimal2"><img src="pig-alive.svg" alt="CPU choice" width="100" height="100" id="cpuAnimal2img"></div>
+        <div id="cpuAnimal3"></div>
+      </div>
+    </div>
+    <div id="extraBox">
+      <!--<progress></progress>-->
+    </div>
+    <div id="rules">
+      <h2>Rules</h2>
+      <p class="rule">
+        <span class="rat animal">Rat</span> nibbles <span class="squid animal">Squid's</span> soft gelatenous body
+        <img src="rat-alive.svg" alt="Rat Alive Icon" width="30" height="30"><img src="squid-dead.svg" alt="Squid Dead Icon" width="30" height="30">
+      </p>
+      <p class="rule">
+        Fat <span class="pig animal">Pig</span> crushes little <span class="rat animal">Rat</span> <img src="pig-alive.svg" alt="Rat Alive Icon" width="30" height="30"><img src="rat-dead.svg" alt="Rat Dead Icon" width="30" height="30">
+      </p>
+      <p class="rule">
+        <span class="animal squid">Squid</span> strangles <span class="pig animal">Pig</span> with his tentacles. <img src="squid-alive.svg" alt="Squid Alive Icon" width="30" height="30"><img src="pig-dead.svg" alt="Pig Dead Icon" width="30" height="30">
+      </p>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
 </html>

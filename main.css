@@ -1,30 +1,100 @@
-body { font-size: 20px; font-family: helvetica, arial, sans-serif; }
-#mainBox {
-    text-align: center;
+body {
+  font-size: 20px;
+  font-family: helvetica, arial, sans-serif;
 }
 
+#mainBox {
+  text-align: center;
+}
+
+
 /* JS Warnings */
-#nojs { color: red; background: pink; padding: 1em; border-radius: .5em; }
 
-.animal { font-weight: bold; padding: .5em; border-radius: .5em; text-transform: uppercase; font-size: 0.8em; }
-.rat { background: #DDC6B8; color: #42210B; }
-.pig { background: #F9E4EC; color: #FF7BAC; }
-.squid { background: #C6C8E5; color: #2E3192; }
+#nojs {
+  color: red;
+  background: pink;
+  padding: 1em;
+  border-radius: .5em;
+}
 
-#battleBox { background-color: #8C9C76; border-radius: .5em; width: 500px; height: 300px; margin: 0 auto; }
+.animal {
+  font-weight: bold;
+  padding: .5em;
+  border-radius: .5em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
 
-#clickBox { width: 100px; height: 300px; float: left; }
+.rat {
+  background: #DDC6B8;
+  color: #42210B;
+}
 
-#cpuBox { width: 100px; height: 300px; float: right; }
-#cpuAnimal1, #cpuAnimal2, #cpuAnimal3 { width: 100px; height: 100px; }
+.pig {
+  background: #F9E4EC;
+  color: #FF7BAC;
+}
+
+.squid {
+  background: #C6C8E5;
+  color: #2E3192;
+}
+
+#battleBox {
+  background-color: #8C9C76;
+  border-radius: .5em;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#clickBox {
+  width: 100px;
+  height: 300px;
+  float: left;
+}
+#clickBox a {
+  display: block;
+}
+
+#cpuBox {
+  width: 100px;
+  height: 300px;
+  float: right;
+}
+
+#cpuAnimal1,
+#cpuAnimal2,
+#cpuAnimal3 {
+  width: 100px;
+  height: 100px;
+}
+
+
 /*
 #cpuAnimal1 { background: grey; }
 #cpuAnimal2 { background: pink; }
 #cpuAnimal3 { background: gray; }
 */
 
-#resultBox { width: 500px; height: 0; color: #fff; text-transform: uppercase; font-weight: bold; position: absolute; }
-#resultBox p { width: 100px; margin: 100px auto; }
-.results { line-height: 100px; }
+#resultBox {
+  width: 500px;
+  height: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+}
 
-#extraBox { clear: both; }
+#resultBox p {
+  width: 100px;
+  margin: 100px auto;
+}
+
+.results {
+  line-height: 100px;
+}
+
+#extraBox {
+  clear: both;
+}

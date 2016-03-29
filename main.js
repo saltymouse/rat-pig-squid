@@ -1,91 +1,62 @@
 // Remove JS warning for JS users
 document.getElementById("nojs").style.display = "none";
 
-// Visual results for CPU
-var cpuAnimal = document.getElementById("cpuAnimal2img");
-var animalImages = ["rat-alive.svg", "pig-alive.svg", "squid-alive.svg"];
-var animalIndex = 0;
-function cpuCycle() {
-    cpuAnimal.setAttribute("src", animalImages[animalIndex]);
-    animalIndex++;
-    if (animalIndex >= animalImages.length) {
-        animalIndex = 0;
-    }
-}
-var intervalHandler = setInterval(cpuCycle, 500);
-
-// Add game logic
-
-function getComputerChoice() {
-	var computerChoice = Math.random();
-
-	if (computerChoice < 0.34) {
-		computerChoice = "rat";
-	} else if (computerChoice < 0.67) {
-		computerChoice = "pig";
-	} else {
-		computerChoice = "squid";
-	}
-
-	return computerChoice;
-}
-// Set globals to grab animal img id
-var rat = document.getElementById("ratButton");
-var pig = document.getElementById("pigButton");
-var squid = document.getElementById("squidButton");
-var results = document.getElementById("resultBox");
-
-function playGame(playerChoice) {
-	var computerChoice = getComputerChoice();
+// The main game function
+function rps() {
+  
+  rpsOptions = {
+    animals: ['rat', 'pig', 'squid'],
+    playerChoice: undefined,
+    cpuChoice: undefined,
+  }
+  
+  var clickBox = document.getElementById('clickBox');
+  clickBox.addEventListener('click', getPlayerSelection);
+  
+  function getPlayerSelection(event) {
+    event.preventDefault();
+    var playerSelection = event.target.id;
+    
+    rpsOptions.animals.forEach(function(animal) {
+      if (animal === playerSelection) {
+        rpsOptions.playerChoice = animal;
         
-	if (playerChoice === computerChoice) {
-		return results.innerHTML = "<p class='results'>Tie!</p>";
-        console.log(playerChoice,computerChoice);
-	}
-
-	if (playerChoice === 'rat') {
-        pig.style.opacity = "0.5";
-        squid.style.opacity = "0.5";
-		if (computerChoice === 'squid') {
-            clearInterval(intervalHandler);
-			cpuAnimal.setAttribute("src", animalImages[2]);
-            results.innerHTML = "<p class='results'>Win!</p>";
-		} else {
-            clearInterval(intervalHandler);
-            cpuAnimal.setAttribute("src", animalImages[1]);
-			results.innerHTML = "<p class='results'>Lose!</p>";
-		}
-	}
-
-	if (playerChoice === 'pig') {
-        rat.style.opacity = "0.5";
-        squid.style.opacity = "0.5";
-		if (computerChoice === 'rat') {
-            clearInterval(intervalHandler);
-            cpuAnimal.setAttribute("src", animalImages[0]);
-			results.innerHTML = "<p class='results'>Win!</p>";
-		} else {
-            clearInterval(intervalHandler);
-            cpuAnimal.setAttribute("src", animalImages[2]);
-			results.innerHTML = "<p class='results'>Lose!</p>";
-		}
-	}
-
-	if (playerChoice === 'squid') {
-        rat.style.opacity = "0.5";
-        pig.style.opacity = "0.5";
-		if (computerChoice === 'pig') {
-			clearInterval(intervalHandler);
-            cpuAnimal.setAttribute("src", animalImages[1]);
-			results.innerHTML = "<p class='results'>Win!</p>";
-		} else {
-			clearInterval(intervalHandler);
-            cpuAnimal.setAttribute("src", animalImages[0]);
-			results.innerHTML = "<p class='results'>Lose!</p>";
-		} 
-	}
+        getCpuSelection();
+      }
+    })
+    
+  }; // getPlayerSelection()
+  
+  function getCpuSelection() {
+    var randomChoice = Math.floor( Math.random() *(rpsOptions.animals.length) );
+    
+    rpsOptions.cpuChoice = rpsOptions.animals[randomChoice];
+    
+    seeWhoWins();
+  }; // getCpuSelection()
+  
+  function seeWhoWins() {
+    
+    if (rpsOptions.playerChoice === rpsOptions.animals[0]) {
+      
+      if (rpsOptions.cpuChoice === rpsOptions.animals[0]) {
+        playerWins();
+      }
+      
+      
+      
+    }
+  } // seeWhoWins()
+  
+  function displayWinner() {
+    
+  }
+        
+        
+  
+} // rps
 
 
-}
+rps();
 
 // Need a reset button
