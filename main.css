@@ -9,7 +9,6 @@ body {
 
 
 /* JS Warnings */
-
 #nojs {
   color: red;
   background: pink;
@@ -69,13 +68,6 @@ body {
   width: 100px;
   height: 100px;
 }
-
-
-/*
-#cpuAnimal1 { background: grey; }
-#cpuAnimal2 { background: pink; }
-#cpuAnimal3 { background: gray; }
-*/
 
 #resultBox {
   width: 500px;
