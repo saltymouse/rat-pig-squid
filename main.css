@@ -52,8 +52,12 @@ body {
   height: 300px;
   float: left;
 }
-#clickBox a {
+#clickBox div {
   display: block;
+  
+}
+#clickBox div:hover {
+  cursor: pointer;
 }
 
 #cpuBox {

@@ -1,15 +1,15 @@
-// Remove JS warning for JS users
+// Remove JS warning if JS is enabled
 document.getElementById("nojs").style.display = "none";
 
 // The main game function
 function rps() {
   
   rpsOptions = {
-    // The animals' playing power is their position in array
+    // The animals' playing power IS their position in array
     // i.e. rat = 0, pig = 1, squid = 2
     animals: ['rat', 'pig', 'squid'],
     playerChoice: undefined,
-    cpuChoice: undefined,
+    cpuChoice: undefined
   }
   var resultBox = document.getElementById('resultBox');
   
@@ -21,7 +21,11 @@ function rps() {
   
   function getPlayerSelection(event) {
     event.preventDefault();
-    var playerSelection = event.target.id;
+    
+    // Click event is on the image,
+    // but the div wrapping the image (parent) holds the id
+    var playerSelection = event.target.parentNode.id;
+    
     rpsOptions.animals.forEach(function(animal) {
       if (animal === playerSelection) {
         rpsOptions.playerChoice = animal;
@@ -60,25 +64,52 @@ function rps() {
   
   function displayWinner(victor) {
     
+    function displayPlayer() {
+      clickBox.getElementById(rpsOptions.playerChoice).css('background', 'red');
+    }
+    function displayCpu() {
+      clickBox.getElementById(rpsOptions.cpuChoice).css('background', 'red');
+    }
+    
     switch (victor) {
-      case 'draw':
-        cpuDomDisplay.className = "animated bounceIn"
-        
+      case 'draw':    
         document.getElementById(rpsOptions.playerChoice).className = "animated bounceIn"
         
-        resultBox.innerHTML = "Draw!"
-        break;
-      case 'player': document.getElementById(rpsOptions.playerChoice).className = "animated bounceIn"
+        resultBox.innerHTML = '<p class="animated fadeIn">Draw!</div>';
         
         console.log("Player: "+rpsOptions.playerChoice,"CPU: "+rpsOptions.cpuChoice);
-        console.log("player");
+        console.log("draw");
+        break;
+      case 'player':
+        document.getElementById(rpsOptions.playerChoice).className = "animated bounceIn"
+        
+        resultBox.innerHTML = '<p class="animated fadeIn">You Win!</div>';
+        
+        console.log("Player: "+rpsOptions.playerChoice,"CPU: "+rpsOptions.cpuChoice);
+        console.log("player wins");
         break;
       case 'cpu':
+        document.getElementById(rpsOptions.cpuChoice).className = "animated bounceIn"
+        
+        resultBox.innerHTML = '<p class="animated fadeIn">CPU Wins!</div>';
         console.log("Player: "+rpsOptions.playerChoice,"CPU: "+rpsOptions.cpuChoice);
-        console.log('cpu');
+        console.log('cpu wins');
         break;
     } // switch (victor)
+    
+    reset();
   } // displayWinner(victor)
+  
+  function reset() {
+    
+    rpsOptions.playerChoice = undefined;
+    rpsOptions.cpuChoice = undefined;
+    
+    rpsOptions.animals.forEach(function(animal) {
+      document.getElementById(animal).className = "";
+    })
+    
+  }//reset
   
 } // rps
 
